@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@openzeppelin/contracts': ^4.7.3
   eslint: 8.23.1
   eslint-config-next: 12.3.0
   next: 12.3.0
@@ -8,6 +9,7 @@ specifiers:
   react-dom: 18.2.0
 
 dependencies:
+  '@openzeppelin/contracts': 4.7.3
   next: 12.3.0_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -221,6 +223,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@openzeppelin/contracts/4.7.3:
+    resolution: {integrity: sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==}
+    dev: false
 
   /@rushstack/eslint-patch/1.1.4:
     resolution: {integrity: sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==}
