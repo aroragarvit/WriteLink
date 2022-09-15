@@ -1,21 +1,25 @@
 {
   "name": "writelink",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aroragarvit/WriteLink.git"
+  },
+  "author": "ranakun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aroragarvit/WriteLink/issues"
+  },
+  "homepage": "https://github.com/aroragarvit/WriteLink#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3",
-    "next": "12.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0"
+    "@openzeppelin/contracts": "^4.7.3"
   }
 }
