@@ -9,20 +9,23 @@ contract library is Book{
     address private _owner;
 
     struct book{
+        string name;
         address author;
         uint256 price;
-        string content; // link to the content
+        bytes memory content; // link to the content
     }
 
     mapping (uint256 => book) private _shelf;
 
-    function publish(uint256 _price, string content) public {
-        _shelf[_bookId] = book(msg.sender,_price,content);
+    function publish(uint256 _price, bytes memory content,string name) public {
+        _shelf[_bookId] = book(msg.sender,_price,content,name);
         _bookID++;
     }
 
-    function purchaseFromAuthor(uint256 _bookId) public {
-        
+    function purchaseFromAuthor(uint256 _bookId, uint256 payment) public payable {
+        require(msg.value >=_shelf[_bookId]._price , 'Must send at least Book Price');
+
+        _mint(msg.sender,_bookId,1,_shelf[_bookId].content);
     }
 
     function bookPrice(uint256 _bookId) public view returns(uint256) {

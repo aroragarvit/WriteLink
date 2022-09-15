@@ -11,12 +11,12 @@ contract Book is ERC1155{
     // Used as the URI for all token types by relying on ID substitution, e.g. https://token-cdn-domain/{id}.json
     string private _uri;
 
-    /**
-     * @dev See {_setURI}.
-     */
-    constructor(string memory uri_) {
-        _setURI(uri_);
-    }
+    // /**
+    //  * @dev See {_setURI}.
+    //  */
+    // constructor(string memory uri_) {
+    //     _setURI(uri_);
+    // }
 
     /**
      * @dev Sets a new URI for all token types, by relying on the token type ID
@@ -37,7 +37,7 @@ contract Book is ERC1155{
      * Because these URIs cannot be meaningfully represented by the {URI} event,
      * this function emits no events.
      */
-    function _setURI(string memory newuri) internal virtual {
+    function setURI(string memory newuri) external  {
         _uri = newuri;
     }
 
@@ -96,7 +96,7 @@ contract Book is ERC1155{
         uint256 id,
         uint256 amount,
         bytes memory data
-    ) virtual {
+    ) external {
         require(to != address(0), "ERC1155: mint to the zero address");
 
         address operator = _msgSender();
